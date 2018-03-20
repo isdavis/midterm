@@ -1,9 +1,16 @@
 Package: rasch
 Type: Package
-Title: What the package does (short line)
+Title: This package calculates Rasch functions
 Version: 1.0
 Date: 2018-03-20
-Author: Who wrote it
+Author: Ian Davis
 Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
+Description: These rasch functions eventually return an estimated ability (theta) for a student given a test and their answers
 License: What license is it under?
+Collate: 
+    'rasch.R'
+    'rasch.prob.R'
+    'rasch.like.R'
+    'rasch.prior.R'
+    'rasch.EAP.R'
+RoxygenNote: 6.0.1
