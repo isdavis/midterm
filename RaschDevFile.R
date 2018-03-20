@@ -98,6 +98,17 @@ rasch.EAP(u)
 rasch.print(u)
 #Everything works! sort of?? I'm going to investigate why my function returns 0 
 
+i<-new("rasch", name = "Ian", a=c(0.2,0.5,0.7,0.2), y=c(1,1,1,1))
+rasch.print(i)
+v<-c(-6:6)
+aio<-sapply(v, rasch.like, stud=i)
+aiopr<-sapply(v, rasch.prior)
+aiom<-aio*v*aiopr
+plot(aiom)
+
+
+#ran this test; clearly the integral of the numerator should not be 0; something is wrong
+
 
 ## Install the package
 #install(pkg=current.code, local=TRUE)
