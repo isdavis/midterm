@@ -21,7 +21,7 @@ function(stud, lower=-6, upper=6) {
   numerator<-function(stud, theta) {
     rasch.like(stud, theta)*rasch.prior(theta)*theta
   }
-  estimateN<-integrate(numerator, stud=stud, lower, upper)$value
-  estimateD<-integrate(denominator, stud=stud, lower, upper)$value
+  estimateN<-integrate(numerator, stud=stud, lower, 0)$value+integrate(numerator, stud=stud, 0, upper)$value
+  estimateD<-integrate(denominator, stud=stud, lower, 0)$value+integrate(denominator, stud=stud, 0, upper)$value
   return(estimateN/estimateD)
 }

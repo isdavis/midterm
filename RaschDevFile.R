@@ -115,7 +115,10 @@ integrate(numerator, stud=i, -6,6)$value
 # I don't know enough about the integrate function to fix this, so I'm just going to substitute the first 
 #expression, with addition, into the rasch.EAP function so that it calculates correctly (I believe)
 
-
+current.code<-as.package("rasch")
+load_all(current.code)
+document(current.code)
+check(current.code)
 
 ## Install the package
 #install(pkg=current.code, local=TRUE)
