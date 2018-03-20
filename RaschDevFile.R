@@ -67,3 +67,7 @@ rasch.EAP<-function(stud, lower=-6, upper=6) {
   return(estimateN/estimateD)
 }
 
+#test
+rasch.EAP(i, 0,2)
+
+
