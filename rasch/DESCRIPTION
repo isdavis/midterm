@@ -13,4 +13,5 @@ Collate:
     'rasch.like.R'
     'rasch.prior.R'
     'rasch.EAP.R'
+    'rasch.print.R'
 RoxygenNote: 6.0.1

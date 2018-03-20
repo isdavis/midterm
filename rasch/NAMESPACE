@@ -2,6 +2,7 @@
 
 export(rasch.EAP)
 export(rasch.like)
+export(rasch.print)
 export(rasch.prior)
 export(rasch.prob)
 exportClasses(rasch)

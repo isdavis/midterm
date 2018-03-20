@@ -91,9 +91,11 @@ document(current.code)
 #if the class has been set up correctly, we should be able to create a new object without issue: 
 
 new("rasch")
-new("rasch", name="Ian Davis", a=c(1,2,3,4), y=c(1,1,0,0))
+u<-new("rasch", name="Ian Davis", a=c(1,2,3,4), y=c(1,1,0,0))
 
 check(current.code)
+rasch.EAP(u)
+rasch.print(u)
 #Everything works! 
 
 
