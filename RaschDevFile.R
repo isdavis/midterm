@@ -70,4 +70,13 @@ rasch.EAP<-function(stud, lower=-6, upper=6) {
 #test
 rasch.EAP(i, 0,2)
 
+#package created! sort of
+getwd()
+package.skeleton("rasch")
+
+#we can edit the description file 
+
+rm(list=ls())
+library(devtools)
+library(roxygen2)
 
