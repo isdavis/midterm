@@ -120,9 +120,12 @@ load_all(current.code)
 document(current.code)
 check(current.code)
 
+setwd("C:/Users/isdav/Documents/GitHub/midterm/rasch")
+devtools::test()
+
 ## Install the package
-#install(pkg=current.code, local=TRUE)
+install(pkg=current.code, local=TRUE)
 
 
 ## Build a version of the package to share manually
-#build(current.code, path=getwd())
+build(current.code, path=getwd())
