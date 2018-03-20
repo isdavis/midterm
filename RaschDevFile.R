@@ -31,3 +31,6 @@ rasch.prob<-function(stud, theta) {
   finalReturnVector<-mapply(makeQ,ret,y)
   return(c(finalReturnVector, ret))
 }
+
+#This is a test of the rasch.prob function. It seems to work
+rasch.prob(i, 1)
