@@ -74,9 +74,21 @@ rasch.EAP(i, 0,2)
 getwd()
 package.skeleton("rasch")
 
-#we can edit the description file 
+#we can edit the description file, delete all but the R files, and then edit the R files so that they have 
+#the correct preambles, allowing roxygen to create rd files that work properly 
 
 rm(list=ls())
 library(devtools)
 library(roxygen2)
 
+#now with all the R files properly introduced, we can run this code to set up the package
+
+current.code<-as.package("rasch")
+load_all(current.code)
+document(current.code)
+
+#with this done, we can set up the class structure with another R file 
+#if the class has been set up correctly, we should be able to create a new object without issue: 
+
+new("rasch")
+new("rasch", name="Ian Davis", a=c(1,2,3,4), y=c(1,1,0,0))
