@@ -92,3 +92,14 @@ document(current.code)
 
 new("rasch")
 new("rasch", name="Ian Davis", a=c(1,2,3,4), y=c(1,1,0,0))
+
+check(current.code)
+#Everything works! 
+
+
+## Install the package
+#install(pkg=current.code, local=TRUE)
+
+
+## Build a version of the package to share manually
+#build(current.code, path=getwd())
