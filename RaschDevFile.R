@@ -99,15 +99,22 @@ rasch.print(u)
 #Everything works! sort of?? I'm going to investigate why my function returns 0 
 
 i<-new("rasch", name = "Ian", a=c(0.2,0.5,0.7,0.2), y=c(1,1,1,1))
-rasch.print(i)
-v<-c(-6:6)
-aio<-sapply(v, rasch.like, stud=i)
-aiopr<-sapply(v, rasch.prior)
-aiom<-aio*v*aiopr
-plot(aiom)
+numerator<-function(stud, theta) {
+  rasch.like(stud, theta)*rasch.prior(theta)*theta
+}
+denominator<-function(stud, theta) {
+  rasch.like(stud, theta)*rasch.prior(theta)
+}
+#After a bunch of troubleshooting, I found this: these two expressions, which to my understanding, 
+# should be equal, in fact are not: 
 
+integrate(numerator, stud=i, -6,0)$value+integrate(numerator, stud=i, 0,6)$value
+integrate(numerator, stud=i, -6,6)$value
 
-#ran this test; clearly the integral of the numerator should not be 0; something is wrong
+#I don't know why this is? granted I'm tired and maybe I just dont understand math but this strikes me as wrong
+# I don't know enough about the integrate function to fix this, so I'm just going to substitute the first 
+#expression, with addition, into the rasch.EAP function so that it calculates correctly (I believe)
+
 
 
 ## Install the package
