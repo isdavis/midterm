@@ -34,3 +34,18 @@ rasch.prob<-function(stud, theta) {
 
 #This is a test of the rasch.prob function. It seems to work
 rasch.prob(i, 1)
+
+#The likelihood function. This calls rasch.prob and returns the prodcuct of the vector PQ 
+rasch.like<-function(stud, theta) {
+  PQ<-rasch.prob(stud, theta)[2]
+  return(prod(PQ))
+}
+
+#Prior function
+rasch.prior<-function(theta) {
+  return(dnorm(theta, mean=0, sd=3))
+}
+
+#Small tests: 
+rasch.like(i, 2)
+rasch.prior(2)
