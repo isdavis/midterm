@@ -96,7 +96,7 @@ u<-new("rasch", name="Ian Davis", a=c(1,2,3,4), y=c(1,1,0,0))
 check(current.code)
 rasch.EAP(u)
 rasch.print(u)
-#Everything works! 
+#Everything works! sort of?? I'm going to investigate why my function returns 0 
 
 
 ## Install the package
